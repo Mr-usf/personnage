@@ -2,42 +2,41 @@ package com.youssef.calculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterAll;
 
 import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
-    private Calculator calc;
 
-    @BeforeEach
-    public void setUp() {
-        // Création de l’objet avant chaque test
-        calc = new Calculator();
+    @BeforeAll
+    public static void setUpAll() {
+        // Méthode statique exécutée avant tous les tests
+        System.out.println("Début des tests Calculator");
     }
 
-    @AfterEach
-    public void tearDown() {
-        // Nettoyage éventuel après chaque test
-        calc = null;
+    @AfterAll
+    public static void tearDownAll() {
+        // Méthode statique exécutée après tous les tests
+        System.out.println("Fin des tests Calculator");
     }
 
     @Test
     public void testAdd() {
-        assertEquals(5, calc.add(2, 3));
-        assertEquals(-1, calc.add(2, -3));
-        assertEquals(0, calc.add(0, 0));
+        assertEquals(5, Calculator.add(2, 3));
+        assertEquals(-1, Calculator.add(2, -3));
+        assertEquals(0, Calculator.add(0, 0));
     }
 
     @Test
     public void testDivide() {
-        assertEquals(2, calc.divide(6, 3));
-        assertEquals(-2, calc.divide(6, -3));
+        assertEquals(2, Calculator.divide(6, 3));
+        assertEquals(-2, Calculator.divide(6, -3));
     }
 
     @Test
     public void testDivideByZero() {
-        assertThrows(IllegalArgumentException.class, () -> calc.divide(5, 0));
+        assertThrows(IllegalArgumentException.class, () -> Calculator.divide(5, 0));
     }
 
 }
