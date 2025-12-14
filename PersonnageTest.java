@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 class PersonnageTest {
 
-    Personage p = new Personage();
+    Personnage p = new Personnage();
     @Test
-    void Initial_Orientation_Est_NORD() {
+    void tournerUneFoisDepuisNordRetourneEst() {
 
-        assertEquals("NORD", p.getOrientation());
+        assertEquals("EST", p.tourner(1));
     }
 
 
