@@ -1,4 +1,4 @@
-﻿package com.youssef.calculator;
+package com.youssef.calculator;
 
 public class ExpectedException {
 }

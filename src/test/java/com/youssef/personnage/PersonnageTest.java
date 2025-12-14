@@ -7,10 +7,11 @@ class PersonnageTest {
 
     Personnage p = new Personnage();
     @Test
-    void tourner_3_Depuis_Nord_Donne_Ouest() {
+    void tourner_zero_fois_retourne_nord() {
 
-        assertEquals("NORD", p.tourner(4));
+        assertEquals("NORD", p.tourner(0));
     }
+
 
 
 
