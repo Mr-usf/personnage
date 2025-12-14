@@ -7,12 +7,8 @@ class PersonnageTest {
 
     Personnage p = new Personnage();
     @Test
-    void tourner_zero_fois_retourne_nord() {
+    void tourner_cinq_fois_equivaut_a_une_fois() {
 
-        assertEquals("NORD", p.tourner(0));
+        assertEquals("EST", p.tourner(5));
     }
-
-
-
-
 }
