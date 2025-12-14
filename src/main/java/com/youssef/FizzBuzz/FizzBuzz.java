@@ -2,7 +2,7 @@ package com.youssef.FizzBuzz;
 
 public class FizzBuzz {
     public static String de(int nbre) {
-        if (nbre % 3 == 0 && nbre % 5 == 0) {
+        if (nbre % 15 == 0) {
             return "FizzBuzz";
         }
         if (nbre % 3 == 0) {
@@ -13,6 +13,4 @@ public class FizzBuzz {
         }
         return String.valueOf(nbre);
     }
-
-
 }
