@@ -5,7 +5,10 @@ import org.junit.jupiter.api.Test;
 
 class FizzBuzzTest {
     @Test
-    void fizzbuzz_de_3_devrait_retourner_Fizz() {
-        assertEquals("Fizz", FizzBuzz.de(3));
+    void fizzbuzz_de_5_devrait_retourner_Buzz() {
+        assertEquals("Buzz", FizzBuzz.de(5));
     }
+
+
+
 }
