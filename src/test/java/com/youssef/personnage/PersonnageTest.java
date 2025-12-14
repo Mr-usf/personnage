@@ -7,8 +7,9 @@ class PersonnageTest {
 
     Personnage p = new Personnage();
     @Test
-    void tourner_cinq_fois_equivaut_a_une_fois() {
-
-        assertEquals("EST", p.tourner(5));
+    void appels_successifs_conservent_l_orientation() {
+        p.tourner(1); // EST
+        assertEquals("SUD", p.tourner(1));
     }
+
 }
